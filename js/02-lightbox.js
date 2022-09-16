@@ -13,7 +13,7 @@ function createGalleryMarkup(items) {
   alt="${item.description}" /> 
   </a> 
   </div>`).join('');
-}
+};
 
 const addGalleryMarkup = createGalleryMarkup(galleryItems);
 
@@ -25,17 +25,16 @@ function onImageClick(evt) {
 
   if (evt.target.nodeName !== 'IMG'){
     return;
-  }
+  };
   
  var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
   gall.addEventListener("keydown", (evt) => {
     if (evt.code === "Escape") {
         lightbox.close();      
-    }
+    };
   });
-}
+};
 function blockStandartAction(evt) {
   evt.preventDefault();
-}
-
+};
