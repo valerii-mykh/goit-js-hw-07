@@ -12,8 +12,8 @@ function createGalleryMarkup(items) {
   data-source="${item.original}" 
   alt="${item.description}" /> 
   </a> 
-  </div>`).join('');
-};
+  </div>`).join('')
+}
 
 const addGalleryMarkup = createGalleryMarkup(galleryItems);
 
@@ -24,17 +24,17 @@ function onImageClick(evt) {
   blockStandartAction(evt);
 
   if (evt.target.nodeName !== 'IMG'){
-    return;
-  };
+    return
+  }
   
  var lightbox = new SimpleLightbox('.gallery a', { /* options */ });
 
   gall.addEventListener("keydown", (evt) => {
     if (evt.code === "Escape") {
-        lightbox.close();      
-    };
-  });
-};
+        lightbox.close()     
+    }
+  })
+}
 function blockStandartAction(evt) {
   evt.preventDefault();
-};
+}
